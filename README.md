@@ -32,7 +32,7 @@ pnpm install --frozen-lockfile
 ```
 3. Navigate to the `src` folder in the cloned Vencord repository, create a new folder called `userplugins` if it dosen't already exist.
 
-3. Download `silentDelete.tsx` from the repository and move it to the `userplugins` folder.
+3. Inside `userplugins`, create a folder called `SilentDelete`, then download `index.tsx` from this repository and move it into that folder (so the path is `src/userplugins/SilentDelete/index.tsx`).
 
 4. Build Vencord and inject Discord:
 
@@ -93,6 +93,9 @@ Whether to delete the original message from the server. If disabled, the origina
 
 ### Purge Interval 
 Delay between each message deletion during `/silentpurge` in milliseconds (recommended: 500-1000ms to avoid rate limits, default: 500ms)
+
+### Silent Delete On Empty Edit
+When enabled, submitting an edit with the message content fully erased silently deletes the message automatically.
 
 ### Accent Color
 Hex color code for the Silent Delete icon and menu text (default: `#ed4245`)
